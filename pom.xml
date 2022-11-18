@@ -43,7 +43,7 @@
 				<artifactId>dockerfile-maven-plugin</artifactId>
 				<version>1.4.0</version>
 				<configuration>
-					<repository>prk54989/${project.artifactId}</repository>
+					<repository>prk54989/${project.artifactId}.jar</repository>
 					<tag>${project.version}</tag>
 <!--					Password mapped with .m2/settings.xml-->
 					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
