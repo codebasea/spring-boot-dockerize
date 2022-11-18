@@ -16,11 +16,13 @@ http://localhost:9090/message
 # image will tag to push to DockerHub
 docker tag spring-boot-docker.jar prk54989/spring-boot-docker.jar
 
-#Image push to DockerHub
+# Image push to DockerHub
 docker push prk54989/spring-boot-docker.jar
 
-#Docker Image pull from DockerHub
+# Docker Image pull from DockerHub
 docker pull prk54989/spring-boot-docker.jar
 
-#run Docker image from DockerHub
+# run Docker image from DockerHub
 docker run -p 9090:8080 prk54989/spring-boot-docker.jar
+
+# Build and push Spring Boot Docker images using Maven plugin

@@ -37,6 +37,32 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+<!--			Build and push Spring Boot Docker images using Maven plugin-->
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>1.4.0</version>
+				<configuration>
+					<repository>prk54989/${project.artifactId}</repository>
+					<tag>${project.version}</tag>
+<!--					Password mapped with .m2/settings.xml-->
+					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
+					<buildArgs>
+						<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+					</buildArgs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>default</id>
+						<phase>install</phase>
+						<goals>
+							<goal>build</goal>
+							<goal>push</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+<!--			Build and push Spring Boot Docker images using Maven plugin-->
 		</plugins>
 		<finalName>spring-boot-docker</finalName>
 	</build>
