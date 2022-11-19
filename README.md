@@ -26,3 +26,4 @@ docker pull prk54989/spring-boot-docker.jar
 docker run -p 9090:8080 prk54989/spring-boot-docker.jar
 
 # Build and push Spring Boot Docker images using Maven plugin
+JRE set in Jenkins : Go to Jenkins -> Manage Jenkins -> Configure System -> Global properties Check the box 'Environment variables' and add the JAVA_HOME path
