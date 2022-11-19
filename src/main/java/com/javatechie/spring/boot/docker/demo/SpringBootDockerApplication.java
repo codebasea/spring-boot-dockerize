@@ -14,6 +14,11 @@ public class SpringBootDockerApplication {
 		return "Welcome to JavaTechie..!!";
 	}
 
+	@GetMapping("/index")
+	public String index() {
+		return "Welcome to JavaTechie..!! index";
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootDockerApplication.class, args);
 	}
